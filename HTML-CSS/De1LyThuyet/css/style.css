@@ -32,7 +32,7 @@ a { text-decoration: none;}
 .clear { clear: both;}
 
 /* wrap of facts class*/
-.facts h3 {
+.label.label-facts {
   font-size: 16px;
   margin-top: 25px;
   padding-left: 4px;
@@ -69,11 +69,6 @@ a { text-decoration: none;}
   margin-left: 12%;
   font-size: 14px;
 }
-.comment-write h3 {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 5px;
-}
 .table {
   margin-left: 4px;
   margin-right: 4px;
@@ -81,6 +76,14 @@ a { text-decoration: none;}
 .comment-write td { 
   padding-left: 5px;
   font-size: 15px;
+}
+.label {  
+  font-weight: bold;
+}
+.label.label-comment {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
 }
 #td-label { width: 22%;}
 input { 
