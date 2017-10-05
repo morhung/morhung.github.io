@@ -18,11 +18,11 @@ a { text-decoration: none;}
   font-size: 16px;
   margin-right: 1px;
 }
-.avatar-info { height: 100px;}
 .profile-avatar {
   float: left;
   width: 100px;
   height: 90px;
+  margin-top: 4px;
 }
 .profile-info {
   overflow: scroll;
@@ -82,7 +82,11 @@ a { text-decoration: none;}
   padding-left: 5px;
   font-size: 15px;
 }
-input { width: 35%}
-
+#td-label { width: 22%;}
+input { 
+  width: 35%;
+  height: 20px;
+}
+textarea { max-width: 375px;}
 
 
