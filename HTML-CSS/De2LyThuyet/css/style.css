@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body { 
+  font-family: Helvetica, sans-serif;
+  font-size: 11px;
+}
+.title {
+  border-bottom: solid 2px #ffa500;
+  font-size: 12px;
+  font-style: bold;
+}
+.clear { clear: both;}
+
+.container {
+  background: #e6f3fb;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/*wrap for blogroll class*/
+.blogroll-top { background: white;}
+.blogroll-left {
+  float: left;
+  width: 55%;
+  padding-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.blogroll-left img {
+  width: 220px;
+  height: 110px;
+  border: solid 1px #DDDFE0;
+}
+.blogroll-right {
+  float: right;
+  width: 35%;
+  padding-top: 12px;
+}
+.blogroll-right h3 { color: blue;}
+#p-italic { font-style: italic;}
+.blogroll ul li {
+  list-style: none;
+  background: #fbf0c0;
+  height: 25px;
+}
