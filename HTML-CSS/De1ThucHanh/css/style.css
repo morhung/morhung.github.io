@@ -1,10 +1,8 @@
 * {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
-body {
-font-family: Verdana, "Arial", Helvetica, sans-serif;
-}
+body { font-family: Verdana, "Arial", Helvetica, sans-serif;}
 .clear { clear: both;}
 .frame {
   width: 1250px;
@@ -24,6 +22,7 @@ p {
 h4 {
   color: yellow;
   text-align: justify;
+  letter-spacing: 2px;
 }
 
 /*wrap for header class*/
@@ -42,12 +41,15 @@ h4 {
 .banner img {
   position: absolute;
   right: 21%;
-  bottom: 0px;
+  bottom: 1px;
 }
 .banner h3 {
-  font-size: 20px;
-  padding-bottom: 50px;
+  font-size: 26px;
+  padding-bottom: 40px;
   color: yellow;
+  font-family: intial;
+  word-spacing: 5px;
+  letter-spacing: 2px;
 }
 .banner p { text-align: left;}
 
@@ -59,8 +61,8 @@ h4 {
 .frame ul {
   list-style-type: none;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 .frame li {
   position: relative;
@@ -93,10 +95,10 @@ h4 {
 }
 .content-right {
   float: right;
-  width: 43%;
+  width: 42%;
   background: url(../image/home_services_bg_marketing.gif) no-repeat left top;
 }
-.content-right h4 { padding-bottom: 50px;}
+.content-right h4 { padding-bottom: 45px;}
 .frame-text.frame-text-content { margin-left: 0px;}
 
 /*wrap for footer class*/
@@ -106,6 +108,7 @@ h4 {
 }
 .footer p {
   text-align: center;
+  font-size: 12px;
 }
 
 
