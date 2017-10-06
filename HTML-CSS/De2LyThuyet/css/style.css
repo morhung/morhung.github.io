@@ -12,7 +12,8 @@ body {
   font-weight: bold;
 }
 .clear { clear: both;}
-#a-nostyle { text-decoration: none;
+#a-nostyle { 
+  text-decoration: none;
   font-weight: bold;
   color: #41a19b;
   font-size: 13px;
@@ -23,7 +24,10 @@ body {
   background: #e6f3fb;
   width: 300px;
   margin: 0 auto;
-  padding: 10px;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 /*wrap for blogroll class*/
@@ -60,7 +64,10 @@ body {
 }
 
 /*Wrap for Horoscopes*/
-.horoscopes { margin-bottom: 20px;}
+.horoscopes { 
+  margin-bottom: 20px;
+  margin-top: 2px;
+}
 .horoscopes-news {
   padding-top: 10px;
   padding-bottom: 12px;
@@ -134,18 +141,19 @@ body {
 .line {
   margin-top: 3%;
   margin-bottom: 3%;
-  border: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
 }
 
 /*wrap for competitons class*/
 .competitions {
   border: 1px solid #dadada;
-  margin-bottom: 4%;
+  margin-bottom: 1%;
+  background: white;
 }
 .competitions ul {
-  margin-left: 3%;
-  margin-top: 3%;
-  margin-bottom: 3%
+  padding-left: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%
 }
 .competitions ul li {
   list-style: none;
