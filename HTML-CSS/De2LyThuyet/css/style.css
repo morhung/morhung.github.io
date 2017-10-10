@@ -15,7 +15,7 @@ body {
 #a-nostyle { 
   text-decoration: none;
   font-weight: bold;
-  color: #41a19b;
+  color: #44a39f;
   font-size: 13px;
   margin-left: 10%;
 }
@@ -48,13 +48,13 @@ body {
 .blogroll-right {
   float: right;
   width: 42%;
-  padding-top: 12px;
+  padding-top: 8px;
 }
-.blogroll-right h3 { color: #145F80;}
+.blogroll-right h3 { color: #44a39f;}
 .blogroll-right p { padding-right: 4px;}
 #p-italic { font-style: italic;}
 .blogroll ul li {
-  color: #38656C;
+  color: #44a39f;
   list-style: none;
   background: #fbf0c0;
   height: 25px;
