@@ -46,6 +46,7 @@ a { text-decoration: none; color: #0983CE;}
   padding-top: 3%;
   padding-left: 68%;
 }
+form { margin-top: 4px;}
 .logo-search input[type="text"] {
   width: 140px;
   margin-left: 5%;
@@ -59,18 +60,18 @@ a { text-decoration: none; color: #0983CE;}
   width: 68px;
   height: 17px;
 }
-.daily-celebrity {  background: white;}
-.frame-daily {  display: flex;}
+.daily-celebrity { background: white;}
+.frame-daily { display: flex;}
 .gossip {
   width: 50%;
   border-right: 1px dotted;
 }
-.pics {   width: 50%;}
+.pics { width: 50%;}
 .daily-image {
   text-align: center;
   padding-top: 4px;
 }
-.daily-image-title {   position: relative;}
+.daily-image-title { position: relative;}
 .daily-more {
   position: absolute;
   right: 26px;
@@ -85,6 +86,7 @@ a { text-decoration: none; color: #0983CE;}
   margin-bottom: 15px;
 }
 .daily-logo { margin-left: 8px;}
+.daily-logo img { margin-bottom: -2px;}
 
 /*MOVIE*/
 .movie {
@@ -118,7 +120,7 @@ a { text-decoration: none; color: #0983CE;}
   padding-left: 3%;
   padding-right: 3%;
   padding-bottom: 1%;
-  border-bottom: 1px dashed black;
+  border-bottom: 1px dotted #707070;
 }
 .review-box h3 {
   position: relative;
@@ -132,8 +134,8 @@ a { text-decoration: none; color: #0983CE;}
   height: 14px;
   background-image: url(../image/topic-star-ratings.gif)
 }
-.star1 {  background-position: 0 47%;}
-.star2 {  background-position: 0 35%; top: -1px;}
+.star1 { background-position: 0 47%;}
+.star2 { background-position: 0 35%; top: -1px;}
 .review-box-content {
   display: flex;
   padding-top: 1%;
@@ -254,7 +256,7 @@ select#select-movie {
   list-style-type: none;
   padding-left: 12%;
 }
-.footer-list li {  display: inline-block;  }
+.footer-list li { display: inline-block;  }
 .footer-list p {
   display: inline;
   margin-left: 8%;

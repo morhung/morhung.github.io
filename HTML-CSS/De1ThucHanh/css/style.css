@@ -40,11 +40,11 @@ h4 {
 .banner img {
   position: absolute;
   margin-left: 49%;
-  top: 0px;
+  top: 0;
 }
 .banner h3 {
   font-size: 26px;
-  padding-bottom: 40px;
+  padding-bottom: 22px;
   color: yellow;
   font-family: intial;
   word-spacing: 5px;
@@ -69,9 +69,7 @@ h4 {
   display: inline-block;
   margin-left: 5px; 
 }
-.frame ul li a {
-  display: inline-block;
-}
+.frame ul li a { display: inline-block;}
 .index {
   position: absolute;
   top: 3px;
@@ -99,7 +97,7 @@ h4 {
   background: url(../image/home_services_bg_marketing.gif) no-repeat left top;
 }
 .content-right h4 { padding-bottom: 45px;}
-.frame-text.frame-text-content { margin-left: 0px;}
+.frame-text.frame-text-content { margin-left: 0;}
 
 /*wrap for footer class*/
 .footer {
