@@ -85,12 +85,6 @@ function isValidDate(dateString) {
    return true;
 }
 
-/*hidden the table calendar when user click button input calendar but not using, enter to input date.*/
-function hiddenTableCalendar() {
-	var table_calendar = document.getElementById("table_calendar");
-	table_calendar.style.display = "none";
-}
-
 /*event when user click button submit
 * check all input?
 * send username, password to server by ajax.
