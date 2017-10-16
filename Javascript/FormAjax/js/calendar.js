@@ -12,7 +12,7 @@ function createCalendar(month, year) {
 	let firstDay = new Date(year, month, 1).getDay(); /* First day of Month*/
 	let totalday_td = new Date(year, month + 1, 0).getDate(); /* Total day in month */
 	let indexDay = 21 + firstDay; /* index of td element when fill the day of month to the table calendar*/
-	for (i = 21; i < 62; i++) { 
+	for (i = 21; i <= 62; i++) { 
 		day_td[i].innerHTML = "";
 		day_td[i].style.background = "white"; /*set white background to td element from 21 to 61*/
 	}
@@ -56,7 +56,7 @@ function selectMonth() {
 
 /* Select the year*/
 function selectYear() {
-	current_year = select_year.value;
+	current_year = parseInt(select_year.value);
 	createCalendar(current_month, current_year);
 }
 
@@ -93,7 +93,9 @@ function nextYear(y) {
 function inputBirthday() {
 	var birthday = document.getElementById("birthday");
 	var table_calendar = document.getElementById("table_calendar");
-	table_calendar.style.display = "block";
+	table_calendar.style.display = "block"; //when click icon calendar, table calendar display.
+
+	/*add event click to td element had index 21-62*/
 	for (var i = 21; i <= 62; i++) {
 		day_td[i].addEventListener("click", function() {
 			let check_day = this.innerHTML;
@@ -104,4 +106,26 @@ function inputBirthday() {
 			}
 		});
 	}
+
+	/*add event mouse to td element had index 21-62*/
+	for (var i = 21; i <= 62; i++) {
+		day_td[i].addEventListener("mouseover", function() {
+			let check_day = this;
+			console.log("mouseover");
+			console.log(check_day);
+			check_day.className = "effect";
+		});
+		day_td[i].addEventListener("mouseout", function() {
+			let check_day = this;
+			console.log("mouseout");
+			console.log(check_day);
+			check_day.className = "";
+		});
+	}
+}
+
+/*hidden the table calendar when user click button input calendar but not using, enter to input date.*/
+function hiddenTableCalendar() {
+	var table_calendar = document.getElementById("table_calendar");
+	table_calendar.style.display = "none";
 }
