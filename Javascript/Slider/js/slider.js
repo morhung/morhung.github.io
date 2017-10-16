@@ -21,7 +21,10 @@ function showImage(id) {
 		img_index[i].className = "index-img"; //set className for all element img index
 	}
 	img[indexImg].style.display = "block";
-	img_index[indexImg].className += " color_bg"; //add color_bg class to element img index
+	img_index[indexImg].className += " color_bg"; //add color_bg class to element img index.
+	setTimeout(function() {
+		showImage(indexImg += 1);
+	}, 1000);
 }
 
 /*event change image when click pre or next*/

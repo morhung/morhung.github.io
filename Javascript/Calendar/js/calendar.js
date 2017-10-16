@@ -5,6 +5,7 @@ var day_td = document.getElementsByTagName("td");
 var select_year = document.getElementById("years");
 var select_month = document.getElementById("month");
 
+hiddenTableCalendar();
 fillMonthYear();
 
 function createCalendar(month, year) {
@@ -20,8 +21,10 @@ function createCalendar(month, year) {
 		day_td[indexDay].innerHTML = i;
 		indexDay++;
 	}
-	if (year === newDate.getFullYear()) {
-		if (month === newDate.getMonth()) {
+	if (year === new Date().getFullYear()) {
+		console.log("year: ", year);
+		if (month === new Date().getMonth()) {
+			console.log("month: ", month);
 			let cur_Day = 12 + firstDay + newDate.getDate();
 			day_td[cur_Day].style.background = "blue";
 		}		
@@ -57,7 +60,7 @@ function selectMonth() {
 /* Select the year*/
 
 function selectYear() {
-	current_year = select_year.value;
+	current_year = parseInt(select_year.value);
 	createCalendar(current_month, current_year);
 }
 
@@ -85,4 +88,44 @@ function nextYear(y) {
 		current_year = 1970;
 	}
 	createCalendar(current_month, current_year);
+}
+
+/* Show table calendar when click
+*  Set and listen click event to td element (index 21 -> 61)
+*  hidden table calendar when set day finished.
+*/
+function inputBirthday() {
+	var birthday = document.getElementById("birthday");
+	var table_calendar = document.getElementById("table_calendar");
+	table_calendar.style.display = "block"; //when click icon calendar, table calendar display.
+
+	/*add event click to td element had index 13-52*/
+	for (var i = 13; i < 55; i++) {
+		day_td[i].addEventListener("click", function() {
+			let check_day = this.innerHTML;
+			if (check_day != "") {
+				console.log(check_day);
+				birthday.value = check_day + "/" +current_month + "/"+current_year;
+				table_calendar.style.display = "none";
+			}
+		});
+	}
+
+	/*add event mouse to td element had index 13-52*/
+	for (var i = 13; i < 55; i++) {
+		day_td[i].addEventListener("mouseover", function() {
+			let check_day = this;
+			check_day.className = "effect";
+		});
+		day_td[i].addEventListener("mouseout", function() {
+			let check_day = this;
+			check_day.className = "";
+		});
+	}
+}
+
+/*hidden the table calendar when user click button input calendar but not using, enter to input date.*/
+function hiddenTableCalendar() {
+	var table_calendar = document.getElementById("table_calendar");
+	table_calendar.style.display = "none";
 }

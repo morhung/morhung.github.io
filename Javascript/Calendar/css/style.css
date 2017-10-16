@@ -1,3 +1,7 @@
+.container {
+	margin: 0 auto;
+	width: 23%
+}
 table {
 	text-align: center;
 	background-color: hotpink;
@@ -7,4 +11,12 @@ td {
 	width: 50px;
 	height: 25px;
 	border: 1px solid pink;
+}
+img {
+  width: 30px;
+  height: 30px;
+}
+#text-display { display: inline-flex; }
+.effect {
+	border: 1px solid gray;
 }

@@ -7,7 +7,11 @@
 	</head>
 	<body>
 		<div class="container">
-			<table>
+			<div id="text-display">
+				<input id="birthday" type="text" name="birthday" placeholder=" dd/mm/yy" onkeydown="hiddenTableCalendar()">	
+				<img src="img/ic_calendar.png" alt="ic_calendar" onclick="inputBirthday()">		
+			</div>
+			<table id="table_calendar">
 				<tr class="remote">
 					<td onclick="nextYear(-1)">&lt;&lt;</td>
 					<td onclick="nextMonth(-1)">&lt;</td>
