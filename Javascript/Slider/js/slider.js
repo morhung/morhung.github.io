@@ -1,4 +1,5 @@
 var indexImg = 0;
+var runauto;
 var img = document.getElementsByClassName("image-slider");
 var img_index = document.getElementsByClassName("index-img");
 
@@ -22,7 +23,8 @@ function showImage(id) {
 	}
 	img[indexImg].style.display = "block";
 	img_index[indexImg].className += " color_bg"; //add color_bg class to element img index.
-	setTimeout(function() {
+	clearTimeout(runauto);
+	runauto = setTimeout(function() {
 		showImage(indexImg += 1);
 	}, 1000);
 }
