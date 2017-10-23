@@ -1,9 +1,9 @@
-var newDate = new Date();
-var current_month = newDate.getMonth();
-var current_year = newDate.getFullYear();
-var day_td = document.getElementsByTagName("td");
-var select_year = document.getElementById("years");
-var select_month = document.getElementById("month");
+var NEWDATE = new Date();
+var CURRENT_MONTH = NEWDATE.getMonth();
+var CURRENT_YEAR = NEWDATE.getFullYear();
+var DAY_TD = document.getElementsByTagName("td");
+var SELECT_YEAR = document.getElementById("years");
+var SELECT_MONTH = document.getElementById("month");
 
 hiddenTableCalendar();
 fillMonthYear();
@@ -11,26 +11,27 @@ fillMonthYear();
 function createCalendar(month, year) {
 	let i;
 	let firstDay = new Date(year, month, 1).getDay(); /* First day of Month*/
-	let totalday_td = new Date(year, month + 1, 0).getDate(); /* Total day in month */
+	let totalDAY_TD = new Date(year, month + 1, 0).getDate(); /* Total day in month */
 	let indexDay = 13 + firstDay; /* index of td element when fill the day of month to the table calendar*/
+	
 	for (i = 13; i < 55; i++) {
-		day_td[i].innerHTML = "";
-		day_td[i].style.background = "white"; /*set white background to td element from 21 to 61*/
+		DAY_TD[i].innerHTML = "";
+		DAY_TD[i].style.background = "white"; /*set white background to td element from 21 to 61*/
 	}
-	for (i = 1; i <= totalday_td; i++) {
-		day_td[indexDay].innerHTML = i;
+	for (i = 1; i <= totalDAY_TD; i++) {
+		DAY_TD[indexDay].innerHTML = i;
 		indexDay++;
 	}
 	if (year === new Date().getFullYear()) {
 		console.log("year: ", year);
 		if (month === new Date().getMonth()) {
 			console.log("month: ", month);
-			let cur_Day = 12 + firstDay + newDate.getDate();
-			day_td[cur_Day].style.background = "blue";
+			let cur_Day = 12 + firstDay + NEWDATE.getDate();
+			DAY_TD[cur_Day].style.background = "blue";
 		}		
 	}
-	select_year.value = current_year;
-	select_month.value = current_month;
+	SELECT_YEAR.value = CURRENT_YEAR;
+	SELECT_MONTH.value = CURRENT_MONTH;
 }
 
 /*
@@ -41,53 +42,53 @@ function fillMonthYear() {
 	let month_arr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	
 	for (i = 0, len = month_arr.length; i < len; i++) {
-		select_month.innerHTML += "<option value='" + i + "'>" + month_arr[i] + "</option";
+		SELECT_MONTH.innerHTML += "<option value='" + i + "'>" + month_arr[i] + "</option";
 	}
 	for (j = 1970; j < 2100; j++){
-		select_year.innerHTML += "<option value='" + j + "'>" + j + "</option";
+		SELECT_YEAR.innerHTML += "<option value='" + j + "'>" + j + "</option";
 	}
-	createCalendar(current_month, current_year);
+	createCalendar(CURRENT_MONTH, CURRENT_YEAR);
 }
 
 
 /*Select the month*/
 function selectMonth() {
-	current_month = parseInt(select_month.value);
-	createCalendar(current_month, current_year);
+	CURRENT_MONTH = parseInt(SELECT_MONTH.value);
+	createCalendar(CURRENT_MONTH, CURRENT_YEAR);
 }
 
 
 /* Select the year*/
 
 function selectYear() {
-	current_year = parseInt(select_year.value);
-	createCalendar(current_month, current_year);
+	CURRENT_YEAR = parseInt(SELECT_YEAR.value);
+	createCalendar(CURRENT_MONTH, CURRENT_YEAR);
 }
 
 /*Change (pre or next) the month*/
 function nextMonth(m) {
-	current_month = parseInt(current_month) + parseInt(m);
-	if (current_month > 11) {
-		current_month = 0;
-		current_year += parseInt(1);
+	CURRENT_MONTH = parseInt(CURRENT_MONTH) + parseInt(m);
+	if (CURRENT_MONTH > 11) {
+		CURRENT_MONTH = 0;
+		CURRENT_YEAR += parseInt(1);
 	}
-	if (current_month < 0) {
-		current_month = 11;
-		current_year -= parseInt(1);
+	if (CURRENT_MONTH < 0) {
+		CURRENT_MONTH = 11;
+		CURRENT_YEAR -= parseInt(1);
 	}
-	createCalendar(current_month, current_year);
+	createCalendar(CURRENT_MONTH, CURRENT_YEAR);
 }
 
 /*Change (pre or next) the year*/
 function nextYear(y) {
-	current_year = parseInt(current_year) + y;
-	if (current_year < 1970) {
-		current_year = 2099;
+	CURRENT_YEAR = parseInt(CURRENT_YEAR) + y;
+	if (CURRENT_YEAR < 1970) {
+		CURRENT_YEAR = 2099;
 	}
-	if (current_year > 2099) {
-		current_year = 1970;
+	if (CURRENT_YEAR > 2099) {
+		CURRENT_YEAR = 1970;
 	}
-	createCalendar(current_month, current_year);
+	createCalendar(CURRENT_MONTH, CURRENT_YEAR);
 }
 
 /* Show table calendar when click
@@ -97,15 +98,16 @@ function nextYear(y) {
 function inputBirthday() {
 	var birthday = document.getElementById("birthday");
 	var table_calendar = document.getElementById("table_calendar");
+	
 	table_calendar.style.display = "block"; //when click icon calendar, table calendar display.
 
 	/*add event click to td element had index 13-52*/
 	for (var i = 13; i < 55; i++) {
-		day_td[i].addEventListener("click", function() {
+		DAY_TD[i].addEventListener("click", function() {
 			let check_day = this.innerHTML;
 			if (check_day != "") {
 				console.log(check_day);
-				birthday.value = check_day + "/" +current_month + "/"+current_year;
+				birthday.value = check_day + "/" +CURRENT_MONTH + "/"+CURRENT_YEAR;
 				table_calendar.style.display = "none";
 			}
 		});
@@ -113,11 +115,11 @@ function inputBirthday() {
 
 	/*add event mouse to td element had index 13-52*/
 	for (var i = 13; i < 55; i++) {
-		day_td[i].addEventListener("mouseover", function() {
+		DAY_TD[i].addEventListener("mouseover", function() {
 			let check_day = this;
 			check_day.className = "effect";
 		});
-		day_td[i].addEventListener("mouseout", function() {
+		DAY_TD[i].addEventListener("mouseout", function() {
 			let check_day = this;
 			check_day.className = "";
 		});
@@ -127,5 +129,6 @@ function inputBirthday() {
 /*hidden the table calendar when user click button input calendar but not using, enter to input date.*/
 function hiddenTableCalendar() {
 	var table_calendar = document.getElementById("table_calendar");
+	
 	table_calendar.style.display = "none";
 }
