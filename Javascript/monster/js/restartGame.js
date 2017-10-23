@@ -7,7 +7,8 @@ var restartGame = function(game) {
 
 	this.restart = function() {
 		SPEED = SPEED_ARR[0];
-		sessionStorage.SCORE = 0;
+		//sessionStorage.SCORE = 0;
+		self.game.score = 0;
 		this.game.heart = 5;
 		this.game.level = 0;
 		this.game.numberBoom = 3;
