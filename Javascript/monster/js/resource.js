@@ -1,9 +1,9 @@
 var gameImage = function(name) {
-	this.img = null;
 	this.name = name;
+	this.img = null;
 	this.loaded = false;
 
-	var self = this;
+	let self = this;
 
 	this.load = function() {
 		this.img = new Image();
@@ -31,7 +31,7 @@ var resource = function(game) {
 		this.level = new gameImage("level");
 		this.gameover = new gameImage("gameover");
 
-		var self = this;
+		let self = this;
 		
 		this.load = function() {
 			this.monster1.load();
@@ -50,6 +50,7 @@ var resource = function(game) {
 			this.gameover.load();
 		}
 
+		//loop check image loaded after 0.5s
 		setInterval(function() {
 			self.checkAllImageLoaded();
 		}, 500)

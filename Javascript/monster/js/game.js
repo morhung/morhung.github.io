@@ -66,6 +66,7 @@ var game = function() {
 
 				//game click
 				let i = 0;
+
 				for (; i < self.monsters_arr.length; i++) {
 					if (self.monsters_arr[i].clickMonster(xPosition, yPosition)) {	
 						self.monsters_arr[i].setLevel();
@@ -95,7 +96,7 @@ var game = function() {
 	}
 
 	this.start = function() {	
-		this.loop();		
+		this.loop();			
 	}
 
 	// Create Monster
@@ -106,7 +107,7 @@ var game = function() {
 				newMonster.init();
 				self.monsters_arr.push(newMonster); //push monsters_arr to monster array.
 			}
-		}		
+		}			
 	}
 
 	//loop in game
@@ -116,7 +117,7 @@ var game = function() {
 			self.draw();
 			clearTimeout(clearTime);
 			clearTime = setTimeout(self.loop, self.timeLoop); 
-		}		
+		}
 	}
 
 	this.update = function() {

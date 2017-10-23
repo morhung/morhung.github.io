@@ -5,8 +5,6 @@ var monster = function(game) {
 	this.die = false; // monster's state.
 	this.pos = null; //position of monster when create
 	this.click = false;
-	
-	var self = this;
 
 	this.init = function() {
 
@@ -39,8 +37,10 @@ var monster = function(game) {
 		pmonster8 = new monsterPosition(215, 100, 215, 100, 215, 340, false, 0, 0, true);
 
 		//add monster's position when create to array and random it.
-		var postions = [pmonster1, pmonster2, pmonster3, pmonster4, pmonster5, pmonster6, pmonster7, pmonster8];
-		self.pos = postions[this.getRandomMonster(0, 7)];
+		let postions = [pmonster1, pmonster2, pmonster3, pmonster4, pmonster5, pmonster6, pmonster7, pmonster8];
+		
+		this.pos = postions[this.getRandomMonster(0, 7)];
+
 	}
 
 	this.getRandomMonster = function(min, max) {
@@ -58,9 +58,9 @@ var monster = function(game) {
 	this.draw = function() {
 		if (this.pos.visible) {
 			this.game.context.drawImage(
-				self.img,
-				self.pos.x,
-				self.pos.y
+				this.img,
+				this.pos.x,
+				this.pos.y
 			);
 		}
 	}
@@ -75,19 +75,19 @@ var monster = function(game) {
 	
 	//action when click monster
 	this.clickMonster = function(cx, cy) {
-		if (cx >= self.pos.x && (cx <= self.pos.x + 70) && cy >= self.pos.y && (cy <= self.pos.y + 70)) {
-			self.pos.dieX = cx;
-			self.pos.dieY = cy;
-			self.pos.x = self.pos.defaultX;
-			self.pos.y = self.pos.defaultY;
+		if (cx >= this.pos.x && (cx <= this.pos.x + 70) && cy >= this.pos.y && (cy <= this.pos.y + 70)) {
+			this.pos.dieX = cx;
+			this.pos.dieY = cy;
+			this.pos.x = this.pos.defaultX;
+			this.pos.y = this.pos.defaultY;
 
 			//blood position
 			let blood = {};
-			blood.x = self.pos.dieX;
-			blood.y = self.pos.dieY;
+			blood.x = this.pos.dieX;
+			blood.y = this.pos.dieY;
 
 			//blood array
-			self.game.bloodList.push(blood);		
+			this.game.bloodList.push(blood);
 			return true;
 		}
 		return false;
@@ -95,10 +95,10 @@ var monster = function(game) {
 
 	//set level in game.
 	this.setLevel = function(){
-		let level_old = self.game.level;
-		self.game.level = Math.floor(sessionStorage.SCORE / 50);
-		if (self.game.level < level_old) {
-			self.game.level = level_old;
+		let level_old = this.game.level;
+		this.game.level = Math.floor(sessionStorage.SCORE / 50);
+		if (this.game.level < level_old) {
+			this.game.level = level_old;	
 		}	
 	}
 }
