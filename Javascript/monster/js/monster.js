@@ -96,7 +96,7 @@ var monster = function(game) {
 	//set level in game.
 	this.setLevel = function(){
 		let level_old = this.game.level;
-		this.game.level = Math.floor(sessionStorage.SCORE / 50);
+		this.game.level = Math.floor(self.game.score / 50);
 		if (this.game.level < level_old) {
 			this.game.level = level_old;	
 		}	

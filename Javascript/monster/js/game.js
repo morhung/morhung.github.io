@@ -12,6 +12,7 @@ var game = function() {
 	this.pause = null;
 	this.checkpaused = false;
 	this.restartGame = null;
+	this.score = 0;
 	this.heart = 5;
 	this.level = 0;
 	this.resourceLoaded = false; // check resource loaded??
@@ -70,8 +71,9 @@ var game = function() {
 				for (; i < self.monsters_arr.length; i++) {
 					if (self.monsters_arr[i].clickMonster(xPosition, yPosition)) {	
 						self.monsters_arr[i].setLevel();
-						self.monsters_arr.splice(i, 1);				
-						sessionStorage.SCORE = Number(sessionStorage.SCORE) + 10;
+						self.monsters_arr.splice(i, 1);
+						self.score += 10;			
+						//sessionStorage.SCORE = Number(sessionStorage.SCORE) + 10;
 						SPEED = SPEED_ARR[self.level];															
 						return;					
 					}
@@ -79,8 +81,9 @@ var game = function() {
 			
 				// not click in monster => score = score - 5.
 				if (i == self.monsters_arr.length) {
-						sessionStorage.SCORE = Number(sessionStorage.SCORE) - 5;
-						countNotClickMonster++;
+					self.score -= 5;
+					//sessionStorage.SCORE = Number(sessionStorage.SCORE) - 5;
+					countNotClickMonster++;
 				}
 
 				// not click 5 times in monster =>> score = score - 5.
@@ -129,7 +132,8 @@ var game = function() {
 			this.monsters_arr[i].update();
 			if (self.monsters_arr[i].checkMoveEndLine()) {
 				self.monsters_arr.splice(i, 1);
-				sessionStorage.SCORE = Number(sessionStorage.SCORE) - 5;
+				self.score -= 5;
+				//sessionStorage.SCORE = Number(sessionStorage.SCORE) - 5;
 			}
 		}
 	}
@@ -177,7 +181,7 @@ var game = function() {
 	this.drawScore = function(){
 		self.context.fillStyle = '#ffffff';
 		self.context.font = '26px Arial bold';
-		self.context.fillText('Score: ' + sessionStorage.SCORE, 10, 25);
+		self.context.fillText('Score: ' + self.score, 10, 25);
 	}
 
 	//draw number boom
@@ -210,7 +214,7 @@ var game = function() {
 
 	//draw blood when monster died.
 	this.drawBlood = function() {
-		if (self.bloodList.length > 6) {
+		if (self.bloodList.length > 8) {
 			self.bloodList.splice(0, 1); //del first index in array bloodList
 		}
 
