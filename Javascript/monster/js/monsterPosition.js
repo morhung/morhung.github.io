@@ -11,8 +11,6 @@ var monsterPosition = function(x, y, defaultX, defaultY, toX, toY, die, dieX, di
 	this.visible = visible;
 	this.checkMoveEnd = false;
 
-	var self = this;
-
 	//monster move.
 	this.move = function() {
 		if (this.x == this.toX && this.y == this.toY ) {

@@ -1,22 +1,20 @@
 var restartGame = function(game) {
 	this.game = game;
 	
-	var self = this;
-
 	this.drawRestart = function() {
-		self.game.context.drawImage(self.game.resource.restart.img, 260, 20);
+		this.game.context.drawImage(this.game.resource.restart.img, 260, 20);
 	}
 
 	this.restart = function() {
 		SPEED = SPEED_ARR[0];
 		sessionStorage.SCORE = 0;
-		self.game.heart = 5;
-		self.game.level = 0;
-		self.game.numberBoom = 3;
-		self.game.running = true;
-		self.game.checkpaused = false;
-		self.game.monsters_arr.splice(0, self.game.monsters_arr.length);
-		self.game.bloodList.splice(0, self.game.bloodList.length);
-		self.game.start();
+		this.game.heart = 5;
+		this.game.level = 0;
+		this.game.numberBoom = 3;
+		this.game.running = true;
+		this.game.checkpaused = false;
+		this.game.monsters_arr.splice(0, this.game.monsters_arr.length);
+		this.game.bloodList.splice(0, this.game.bloodList.length);
+		this.game.start();
 	}
 }
