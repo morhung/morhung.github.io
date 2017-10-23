@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>Game Monster</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<canvas id="canvas_game" width="500px" height="600px" style="border: 1px solid blue"></canvas>
+		</div>
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript" src="js/boom.js"></script>		
+		<script type="text/javascript" src="js/monsterPosition.js"></script>
+		<script type="text/javascript" src="js/monster.js"></script>
+		<script type="text/javascript" src="js/resource.js"></script>
+		<script type="text/javascript" src="js/pause.js"></script>
+		<script type="text/javascript" src="js/restartGame.js"></script>
+		<script type="text/javascript" src="js/gameover.js"></script>
+		<script type="text/javascript">
+			var game = new game();
+			game.init();
+			game.start();
+		</script>
+	</body>
+</html>
