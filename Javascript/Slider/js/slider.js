@@ -1,40 +1,40 @@
-var indexImg = 0;
-var runauto;
-var img = document.getElementsByClassName("image-slider");
-var img_index = document.getElementsByClassName("index-img");
+var INDEX_IMG = 0;
+var RUNAUTO;
+var IMG = document.getElementsByClassName("image-slider");
+var IMG_INDEX = document.getElementsByClassName("index-img");
 
-showImage(indexImg);
+showImage(INDEX_IMG);
 
 function showImage(id) {
-	let i, totalImg;
-	totalImg = img.length;
+	let i, totalIMG;
+	totalIMG = IMG.length;
 
-	if (id > totalImg - 1) {
-		indexImg = 0;
+	if (id > totalIMG - 1) {
+		INDEX_IMG = 0;
 	}
 	if (id < 0) {
-		indexImg = totalImg - 1;
+		INDEX_IMG = totalIMG - 1;
 	}
 
-	//Set all img
-	for (i = 0; i < totalImg; i++) {	
-		img[i].style.display = "none"; //set display: none for all element img slider
-		img_index[i].className = "index-img"; //set className for all element img index
+	//Set all IMG
+	for (i = 0; i < totalIMG; i++) {	
+		IMG[i].style.display = "none"; //set display: none for all element IMG slider
+		IMG_INDEX[i].className = "index-img"; //set className for all element IMG index
 	}
-	img[indexImg].style.display = "block";
-	img_index[indexImg].className += " color_bg"; //add color_bg class to element img index.
-	clearTimeout(runauto);
-	runauto = setTimeout(function() {
-		showImage(indexImg += 1);
+	IMG[INDEX_IMG].style.display = "block";
+	IMG_INDEX[INDEX_IMG].className += " color_bg"; //add color_bg class to element IMG index.
+	clearTimeout(RUNAUTO);
+	RUNAUTO = setTimeout(function() {
+		showImage(INDEX_IMG += 1);
 	}, 1000);
 }
 
 /*event change image when click pre or next*/
-function changeImg(id) {
-	showImage(indexImg += id);
+function changeIMG(id) {
+	showImage(INDEX_IMG += id);
 }
 
 /*event change image when click index image*/
 function indexClick(id) {
-	showImage(indexImg = id);
+	showImage(INDEX_IMG = id);
 }
