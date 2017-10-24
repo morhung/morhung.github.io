@@ -1,6 +1,10 @@
 var gameover = function(game) {
 	this.game = game;
 	
+	/*
+	* gameover when heart = 0 or score < 0.
+	* when gameover, draw gameover's image and high score.
+	*/
 	this.gameover = function() {
 		if (this.game.heart == 0 || self.game.score < 0) {
 			this.game.running = false;
