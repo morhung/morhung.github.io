@@ -1,13 +1,10 @@
-var monsterPosition = function(x, y, defaultX, defaultY, toX, toY, die, dieX, dieY, visible) {
+var monsterPosition = function(x, y, defaultX, defaultY, toX, toY, visible) {
 	this.x = x; //position current x
 	this.y = y; //position current y
 	this.defaultX = defaultX; //position x default
 	this.defaultY = defaultY; //position y default
 	this.toX = toX; //move to position x
 	this.toY = toY; //move to position y
-	this.die = die; //boolean
-	this.dieX = dieX; ///position x when die
-	this.dieY = dieY; //position y when die
 	this.visible = visible;
 	this.checkMoveEnd = false;
 
@@ -21,26 +18,21 @@ var monsterPosition = function(x, y, defaultX, defaultY, toX, toY, die, dieX, di
 		}
 
 		if (this.x > this.toX) {
-			this.x -= SPEED;
-			
-		}else if (this.x < this.toX) {
+			this.x -= SPEED;			
+		} else if (this.x < this.toX) {
 			this.x += SPEED;
 		}
 
 		if (this.y < this.toY) {
-			this.y += SPEED;
-			
+			this.y += SPEED;		
 		} else if (this.y > this.toY) {
-			this.y -= SPEED;
-			
+			this.y -= SPEED;		
 		}
 	
 		//check the monster go out display.
 		if (this.x == this.defaultX && this.y == this.defaultY) {
 			this.checkMoveEnd = true;
 			this.visible = false;
-			this.x = this.defaultX;
-			this.y = this.defaultY;
 		}
 	}
 }

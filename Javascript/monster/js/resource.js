@@ -5,6 +5,7 @@ var gameImage = function(name) {
 
 	let self = this;
 
+	//load resource
 	this.load = function() {
 		this.img = new Image();
 		this.img.onload = function() {
@@ -57,8 +58,7 @@ var resource = function(game) {
 
 		//Check all Image loaded?
 		this.checkAllImageLoaded = function() {
-		if (
-			this.monster1.loaded &&
+		if ( this.monster1.loaded &&
 			this.monster2.loaded &&
 			this.monster3.loaded &&
 			this.monster4.loaded &&
@@ -72,7 +72,8 @@ var resource = function(game) {
 			this.heart.loaded &&
 			this.level.loaded &&
 			this.gameover.loaded
-			) {
+			)
+		{
 			this.game.resourceLoaded = true;
 		}
 	}
