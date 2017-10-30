@@ -30,7 +30,7 @@ function showImage(id) {
 }
 
 /*event change image when click pre or next*/
-function changeIMG(id) {
+function changeImg(id) {
 	showImage(INDEX += id);
 }
 
