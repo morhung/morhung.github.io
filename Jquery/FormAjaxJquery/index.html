@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FormAjax Jquery</title>
+		<link rel="stylesheet" type="text/css" href="css/formajax.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<form id="form">
+				<fieldset>
+					<legend>Login</legend>
+					<table class="table_form">
+						<tr>
+							<td>Username:</td>
+							<td>
+								<input id="username" type="text" name="username" onchange="check_inputUsername()">
+							</td>
+							<th>
+								<p id="err_username"></p>
+							</th>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td>
+								<input id="password" type="password" name="password" onchange="check_inputPassword()">							
+							</td>
+							<th>
+								<p id="err_password"></p>
+							</th>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td>
+								<input id="email" type="email" name="email" onchange="check_inputEmail()">
+							</td>
+							<th>
+								<p id="err_email"></p>
+							</th>
+						</tr>
+						<tr>
+							<td>Birthday:</td>
+							<td>
+								<div id="text-display">
+									<input id="input_calendar" type="text" name="calendar">
+									<img id="img_calendar" src="img/ic_calendar.png">
+								</div>
+							</td>
+							<th>
+								<p id="err_birthday"></p>
+							</th>				
+						</tr>						
+					</table>
+					<input id="btnSubmit" type="button" value="Submit" onclick="submit_check()">
+					<input id="btnRefresh" type="button" value="Refresh" onclick="refresh()">		
+				</fieldset>
+			</form>
+			<p id="kq"></p>
+		</div>
+		
+		<script type="text/javascript" src="js/calendar.js"></script>
+		<script type="text/javascript" src="js/formajax.js"></script>
+	</body>
+</html>
