@@ -82,7 +82,6 @@ var game = function() {
 				// not click in monster => score = score - 5.
 				if (i == self.monsters_arr.length) {
 					self.score -= 5;
-					//sessionStorage.SCORE = Number(sessionStorage.SCORE) - 5;
 					countNotClickMonster++;
 				}
 
