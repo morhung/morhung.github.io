@@ -1,4 +1,3 @@
-
 /*check validate the username input*/
 function check_inputUsername() {
 	var text_username = document.getElementById("username").value;

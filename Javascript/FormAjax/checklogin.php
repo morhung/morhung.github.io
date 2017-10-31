@@ -1,8 +1,8 @@
 <?php 
 	$db_host = "localhost";
-	$db_username = "root";
-	$db_password = '';
-	$db_name = "formajax";
+	$db_username = "id3265737_hungnd114";
+	$db_password = '123456789@';
+	$db_name = "id3265737_formajax";
 
 	// connect to MySQL Server
 	$connect = mysqli_connect($db_host, $db_username, $db_password);
