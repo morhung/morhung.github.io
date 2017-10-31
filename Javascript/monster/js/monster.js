@@ -54,7 +54,7 @@ var monster = function(game) {
 	//update the monster's position when it move
 	this.update = function() {
 		if (this.pos.visible) {
-			this.pos.move();
+			this.pos.move(this.game.speed);
 		}
 	 }
 
@@ -67,10 +67,7 @@ var monster = function(game) {
 
 	//check monster's position when go out display.
 	this.checkMoveEndLine = function() {
-		if (this.pos.checkMoveEnd) {
-			return true;
-		}
-		return false;
+		return this.pos.checkMoveEnd == true ? true : false;
 	}
 	
 	//action when click monster
