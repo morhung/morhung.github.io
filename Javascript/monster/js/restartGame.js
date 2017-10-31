@@ -8,7 +8,7 @@ var restartGame = function(game) {
 
 	//restart game when button restart clicked.
 	this.restart = function() {
-		SPEED = SPEED_ARR[0];
+		this.game.speed = this.game.speed_arr[0];
 		sessionStorage.LEVEL = 0;
 		self.game.score = 0;
 		this.game.heart = 5;

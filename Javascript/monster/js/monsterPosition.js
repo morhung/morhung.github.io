@@ -9,24 +9,24 @@ var monsterPosition = function(x, y, defaultX, defaultY, toX, toY, visible) {
 	this.checkMoveEnd = false;
 
 	//monster move.
-	this.move = function() {
+	this.move = function(speed) {
 		if (this.x == this.toX && this.y == this.toY ) {
 			this.toX = this.defaultX;
 			this.toY = this.defaultY;
-			this.x -= SPEED;
-			this.y -= SPEED;
+			this.x -= speed;
+			this.y -= speed;
 		}
 
 		if (this.x > this.toX) {
-			this.x -= SPEED;			
+			this.x -= speed;			
 		} else if (this.x < this.toX) {
-			this.x += SPEED;
+			this.x += speed;
 		}
 
 		if (this.y < this.toY) {
-			this.y += SPEED;		
+			this.y += speed;		
 		} else if (this.y > this.toY) {
-			this.y -= SPEED;		
+			this.y -= speed;		
 		}
 	
 		//check the monster go out display.

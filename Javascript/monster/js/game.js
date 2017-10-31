@@ -1,7 +1,5 @@
-var SPEED_ARR = []; //array speed
-var SPEED;
-sessionStorage.SCORE = 0;
-sessionStorage.LEVEL = 0;
+sessionStorage.SCORE = 0; //session save Score
+sessionStorage.LEVEL = 0; //session savae level
 
 var game = function() {
 	this.canvas = null;
@@ -21,9 +19,11 @@ var game = function() {
 	this.running = true; // check running status
 	this.gameover = null;
 	this.timeLoop = 16; //60 frame/s
+	this.speed_arr = [];
+	this.speed;
 	
 	let clearTime;
-	let countNotClickMonster = 0;
+	let countNotClickMonster = 0; //count times click out monster.
 	let self = this;
 	
 	//create game function.
@@ -40,7 +40,7 @@ var game = function() {
 			
 		this.resource.load(); // load resource
 		this.createSpeedArr(240); // creat the speed array
-		SPEED = SPEED_ARR[0];
+		this.speed = self.speed_arr[0]; //set speed start game.
 		
 		//event click in game.
 		this.canvas.addEventListener("click", function(e) {
@@ -74,7 +74,7 @@ var game = function() {
 						self.monsters_arr[i].setLevel();
 						self.monsters_arr.splice(i, 1);
 						self.score += 10;			
-						SPEED = SPEED_ARR[self.level];															
+						self.speed = self.speed_arr[self.level];														
 						return;					
 					}
 				}
@@ -110,7 +110,7 @@ var game = function() {
 				newMonster.init();
 				self.monsters_arr.push(newMonster); //push monsters_arr to monster array.
 			}
-		}			
+		}
 	}
 
 	//loop in game
@@ -118,8 +118,7 @@ var game = function() {
 		if (self.running) {
 			self.update();
 			self.draw();
-			clearTimeout(clearTime);
-			clearTime = setTimeout(self.loop, self.timeLoop); 
+			requestAnimationFrame(self.loop);
 		}
 	}
 
@@ -238,7 +237,7 @@ var game = function() {
 	this.createSpeedArr = function(n) {
 		for (var i = 2; i < n; i++) {
 			if ((n % i) == 0 && i != 3) {
-				SPEED_ARR.push(i);
+				self.speed_arr.push(i);
 			}
 		}
 	}

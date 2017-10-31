@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-
+/*form*/
 form {
   margin: 0 auto;
   width: 30%;
@@ -23,12 +23,18 @@ tr {	height: 28px;}
 
 td {  width: 85px;}
 
+th {
+  font-size: 12px;
+  color: red;
+}
+
 legend {
   font-size: 30px;
   font-weight: bold;
   color: blue;
 }
 
+/*button submit and refresh*/
 input#btnSubmit {
   margin-left: 107px;
   width: 90px;
@@ -40,6 +46,8 @@ input#btnRefresh {
 	width: 90px;
   height: 30px;
 }
+
+/*input calendar*/
 input#birthday {
   width: 77%;
   margin-top: 6px;
@@ -65,12 +73,9 @@ img {
   border: 1px solid gray;
 }
 
+/*element show kq*/
 #kq {
   text-align: center;
   margin: 0 auto;
   color: blue;
-}
-th {
-  font-size: 12px;
-  color: red;
 }
