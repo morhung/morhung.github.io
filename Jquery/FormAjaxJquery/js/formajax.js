@@ -104,6 +104,7 @@ function isValidDate(dateString) {
 **/
 function submit_check() {
 	if (check_inputBirthday() && check_inputUsername() && check_inputPassword()) {
+		console.log("pass");
 		var username = $("#username").val();
 		var password = $("#password").val();
 
@@ -111,12 +112,13 @@ function submit_check() {
 			$.ajax({
 				type: "GET",
 				url: "checklogin.php",
+				dataType:"html",
 				data: {
 					username: username,
 					password: password
 				},
 				success: function(response) {
-					$("kq").html(response);
+					$("#kq").html(response);
 				}
 			})
 		}
@@ -128,7 +130,7 @@ function refresh() {
 	$("#username").val("");
 	$("#password").val("");
 	$("#email").val("");
-	$("#birthday").val("");
+	$("#input_calendar").val("");
 	$("#err_username").html("");
 	$("#err_password").html("");
 	$("#err_email").html("");
