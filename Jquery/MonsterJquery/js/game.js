@@ -11,7 +11,7 @@ var game = function() {
 	this.gameover = null;
 	this.monsters_arr = [];
 	this.bloodList = [];
-	this.score = 5000;
+	this.score = 0;
 	this.heart = 5;
 	this.level = 0;
 	this.numberBoom = 3;
@@ -37,8 +37,9 @@ var game = function() {
 		this.resource.loadResource();
 		this.createSpeedArr(240);
 		this.speed = self.speed_arr[0];
-
-		this.canvas.click(function(e) {
+		
+		$("#canvas_game").click(function(e) {
+			console.log("click");
 			let xPosition = e.pageX - this.offsetLeft;
 			let yPosition = e.pageY - this.offsetTop;		
 			
