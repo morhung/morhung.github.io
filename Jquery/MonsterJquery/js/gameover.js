@@ -10,12 +10,19 @@ var gameover = function(game) {
 			this.game.running = false;
 			this.game.checkpaused = true;
 			this.game.context.drawImage(this.game.resource.gameover.img, 80, 200);
+
 			if (self.game.score > sessionStorage.SCORE) {
 				sessionStorage.SCORE = self.game.score;
 			}
+			//draw high score.
 			this.game.context.fillStyle = "blue";
 			this.game.context.font = "30px Arial";
 			this.game.context.fillText("High Score: " + sessionStorage.SCORE, 160, 450);
+
+			//draw score current
+			this.game.context.fillStyle = "red";
+			this.game.context.font = "30px Arial";
+			this.game.context.fillText("Score: " + self.game.score, 190, 420);			
 		}
 	}
 }
