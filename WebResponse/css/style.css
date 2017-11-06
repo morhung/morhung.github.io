@@ -294,7 +294,8 @@ div.box_1 p{
 	margin:5px 10px 5px 10px;
 	height:115px;
 	display:inline-block;
-	}
+	padding-left: 0 !important;
+}
 div.box_1 a{
 	margin:0px 0 0 10px;
 	display:inline-block;
