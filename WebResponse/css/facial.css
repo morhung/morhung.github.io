@@ -1,0 +1,214 @@
+/*introduction*/
+.group_introduction {
+    
+}
+
+.introduction_content_1 {
+    float: left;
+    width: 100%;
+    font-size: 110%;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.introduction_content_2 {
+    text-align: left;
+    padding-left: 1%;
+}
+.img_1_introduction {
+    float: right;
+}
+
+.txt_title_depilation {
+    width: 52%;
+}
+
+ul.list_introduction {
+    list-style-type: circle;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.p_padding_bottom_slim {
+    padding-left: 3% !important;
+    text-align: justify;
+}
+
+.txt_left_slim {
+    text-align: left;
+    padding-right: 2% !important;
+}
+.img_2_introduction {
+    width: 100%;
+    max-width: 240px;
+    height: 180px;
+    float: right;
+}
+
+.img_3_introduction {
+    width: 100%;
+    max-width: 240px;
+    height: 200px;
+    float: left;
+    padding-right: 10px;
+}
+
+ul.ul_introduction {
+    display: block;
+    text-align: left;
+    margin: 0px auto;
+}
+ul.ul_introduction li {
+    display: inline-block;
+    padding: 5px;
+}
+
+/*facial*/
+.article_index p {
+  text-align: left;
+  padding-left: 15%;
+  padding-right: 12%;
+  letter-spacing: 0.15em;
+}
+p#p_facial_content_1 {
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+#btn_facial_content_1 {
+    margin-top: 3%;
+}
+img#facial_img {
+    float: left;
+    width: 349px;
+    height: 260px;
+}
+.group_facial_text {
+    float: right;
+    width: 49%;
+    text-align: left;
+    font-size: 14px;
+}
+span {
+	font-weight: bold;
+}
+span#price {
+    text-align: center;
+    margin-left: 25%;
+    font-size: 18px;
+}
+#group_facial_btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: 19%;
+}
+.clear {
+	clear: both;
+}
+button.btn_facial_content_2 {
+    float: right;
+    margin-top: 2%;
+}
+
+/*text in depilation*/
+span#text_red { color: red; }
+span#text_title { 
+    margin-left: 25%;
+    font-size: 16px;
+}
+
+/*bihda*/
+div#bihda_text {
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+}
+#img_next_bihda { margin-bottom: 10%;}
+#img_down_bihda { display: none; }
+
+/*acty*/
+.acty_1_text {
+    float: left;
+    width: 61%;
+    text-align: left;
+    padding-left: 3%;
+    font-size: 14px;
+}
+.group_acty_1 img {
+    float: right;
+    padding-top: 3%;
+}
+.acty_2_text {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 3%;
+}
+#img_title_acty { width: 97%; }
+
+/*case*/
+.group_case {
+    text-align: left;
+    padding-left: 3%;
+}
+
+/*qa*/
+p#ques_content {
+    float: right;
+    width: 80%;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-size: 16px;
+    font-weight: bold;
+}
+p#ans_content {
+    float: right;
+    font-size: 14px;
+    width: 80%;
+    padding-left: 1%;
+}
+.group_qa {
+    margin-left: 4%;
+    margin-bottom: 1%;
+}
+.ques {
+    background: whitesmoke;
+    padding-top: 1%;
+}
+.ans { margin-top: 1%; }
+
+
+/*acess*/
+.acess_content {
+    width: 48%;
+    display: inline-grid;
+}
+p#access_text {
+    padding-left: 3%;
+    padding-right: 5%;
+}
+
+/*reruit*/
+p#reruit_content_text {
+    padding-left: 3%;
+    padding-right: 2%;
+    font-size: 110%;
+}
+span.reruit_content_text_bold { font-weight: bold; }
+div#reruit_text {
+    width: 70%;
+    text-align: left;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 110%;
+}
+#flex { 
+    display: flex;
+    margin-bottom: 3%;
+}
+div#reruit_text_2 {
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 110%;
+}
+img#editwidth { width: 100%; }
