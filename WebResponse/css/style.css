@@ -281,7 +281,8 @@ div.content_1 p{
 	width:100%;
 	display:inline-block;
 	margin-bottom:23px;
-	}
+	padding-left: 0 !important;
+}
 div.box_1{
 	width:218px;
 	height:auto;
@@ -289,12 +290,16 @@ div.box_1{
 	text-align:left;
 	border:1px solid #d9d9d9;
 	vertical-align:top;
-	}
+}
 div.box_1 p{
 	margin:5px 10px 5px 10px;
 	height:115px;
 	display:inline-block;
+}
+p#box_p {
 	padding-left: 0 !important;
+	padding-right: 0 !important;
+	letter-spacing: 0 !important;
 }
 div.box_1 a{
 	margin:0px 0 0 10px;
